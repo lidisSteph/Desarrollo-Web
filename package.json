@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/lidisSteph/Desarrollo-Web/issues"
   },
-  "homepage": "https://github.com/lidisSteph/Desarrollo-Web#readme"
+  "homepage": "https://github.com/lidisSteph/Desarrollo-Web#readme",
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
 }
