@@ -1284,7 +1284,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #39b54a;
+    color: #D3560E;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -2444,7 +2444,7 @@ html.no-csstransitions .home-content__main {
 
 .services-list .service-icon {
     float: left;
-    color: #39b54a;
+    color: #D3560E;
     font-size: 4.8rem;
     margin-top: -.6rem;
 }
