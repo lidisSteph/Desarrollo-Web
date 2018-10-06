@@ -2146,7 +2146,7 @@ html.no-csstransitions .home-content__main {
     }
     .home-content__buttons .btn {
         display: block;
-        width: 70%;
+        width: 100%;
         margin: 1.5rem 0 0 0;
     }
     .home-social {
