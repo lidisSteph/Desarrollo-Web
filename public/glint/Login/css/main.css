@@ -52,7 +52,7 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+  font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
@@ -214,7 +214,7 @@ iframe {
 
 .wrap-login100 {
   width: 100%;
-  background: #fff;
+  background-color: #1F1F1F;
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -236,6 +236,8 @@ iframe {
   background-position: center;
   position: relative;
   z-index: 1;
+  height: 498px;
+  margin-top: 76px;
 }
 
 .login100-more::before {
@@ -617,4 +619,9 @@ input.input100 {
 .login100-form-social-item:hover {
   background: #333333;
   color: #fff;
+}
+
+.logo{
+  position: relative;
+  top: -60px;
 }
