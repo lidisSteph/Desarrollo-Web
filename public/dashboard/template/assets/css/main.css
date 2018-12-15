@@ -1062,7 +1062,7 @@ ul.activity-list > li {
     font-size: 18px;
     text-align: center; }
   .auth-box .form-auth-small .btn {
-    margin-top: 20px; }
+    /* margin-top: 5px; */ }
   .auth-box .form-auth-small .element-left {
     float: left; }
   .auth-box .form-auth-small .element-right {

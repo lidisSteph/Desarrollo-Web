@@ -65,15 +65,18 @@ $("#btn-registrarse").click(function(){
 		data:a,
 		dataType:"json",
 		method:"POST",
-		success:function(res){
-			console.log(res);
-			/* if (res.affectedRows==1){
-				claseCss="sender";
-				anexarMensaje(claseCss,$("#txta-mensaje").val(),"66:66");
-				$("#txta-mensaje").val("");
+		success:function(result){
+			//console.log(res);
+
+			 if (result.affectedRows==1){
+				 window.location.href = "../dashboard/dashboard.html";
+				 /* claseCss="sender";
+				 *//* anexarMensaje(claseCss,$("#txta-mensaje").val(),"66:66"); */
+				/* $("#txta-mensaje").val(""); */
 			}else{
-				alert("Error al guardar mensaje");
-			} */
+				console.log(result);
+				
+			} 
 		},
 		error:function(error){
 			console.log(error);
