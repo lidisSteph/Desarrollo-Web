@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>AriEdit</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="../../dashboard/template/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../dashboard/template/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../dashboard/template/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="../../dashboard/template/assets/vendor/toastr/toastr.min.css">
+
+    <link rel="stylesheet" href="../../dashboard/template/assets/css/demo.css">
+    <link rel="stylesheet" href="../../dashboard/template/assets/css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../logoA.png">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
+			<div class="brand" style="height: 1px;">
+				<a href="#"><img src="../../images/nav.png" alt="AriEdit" class="img-responsive logo" style="margin-top: -8px;"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn navbar-btn-right">
+					<a role="button" id="btn-logout" class="btn btn-success update-pro" ><span>Logout</span></a>
+				</div>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><div id="usuarioNombre" style="margin-top: -27px"></div></a>
+						</li>
+						<!-- <li>
+							<a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+                        <li><a href="home.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+						<li><a href="favoritos.html" class=""><i class="fas fa-heart"></i> <span>Favoritos</span></a></li>
+						<li><a href="amigos.html" class=""> <i class="fas fa-users"></i> <span>Amigos</span></a></li>
+						<li><a href="papelera.html" class=""><i class="far fa-trash-alt"></i><span>Papelera</span></a></li>
+						<li><a href="shared.html" class=""><i class="fas fa-share-alt-square"></i> <span>Compartidos conmigo</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<h3 class="page-title">Mi Unidad</h3>
+					<div id="toastr-demo" class="panel">
+						<div class="panel-body">
+							<br>
+							<!-- POSITION -->
+                            <h4>Favoritos</h4>
+                            <div>
+
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th scope="col">Nombre</th>
+											<th scope="col">Tipo Archivo</th>
+											<th scope="col">Extensión</th>
+											<th scope="col">Acciones</th>
+										</tr>
+									</thead>
+									<tbody id="archivos">
+									</tbody>
+								</table>
+                            </div>
+							<!-- END POSITION -->
+							<br>
+							<!-- END CALLBACK -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; Lidis Hernández - 2018</p>
+			</div>
+		</footer>
+	</div>
+    <!-- END WRAPPER -->
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="htmlModal" tabindex="-1" role="dialog" aria-labelledby="htmlModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="htmlModalLabel">HTML ¿Como se llamará?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txt-nombre-archivo-html" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="txt-nombre-archivo-html">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-html" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cssModal" tabindex="-1" role="dialog" aria-labelledby="cssModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cssModalLabel">CSS ¿Como se llamará?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txt-nombre-archivo-css" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="txt-nombre-archivo-css">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-css" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="jsModal" tabindex="-1" role="dialog" aria-labelledby="jsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jsModalLabel">JS ¿Como se llamará?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="txt-nombre-archivo-js" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="txt-nombre-archivo-js">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-js" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+	<!-- Javascript -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="../../dashboard/template/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../dashboard/template/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../../dashboard/template/assets/vendor/toastr/toastr.min.js"></script>
+    <script src="../../dashboard/template/assets/scripts/klorofil-common.js"></script>
+    <script src="../app/favoritos.js"></script>
+</body>
+
+</html>

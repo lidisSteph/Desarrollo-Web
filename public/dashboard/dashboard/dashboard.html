@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom-dashboard.css">
-
-    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="../../logoA.png">
+    <title>AriEdit</title>
     
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">AriEdit</a>
+        <a class="navbar-brand" href="home.html">AriEdit</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,60 +20,45 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="dropdown">
+                <button class="btn btn-outline-info" type="button" id="btn-ejecutar">
+                    Ejecutar
+                </button>
+                <button class="btn btn-outline-success" type="button" id="btn-guardar">
+                    Guardar
+                </button>                 
                 <button class="btn btn-outline-success" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Menu
                 </button>
                 <div class="dropdown-menu my-2 dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">New Pen</a>
-                    <a class="dropdown-item" href="#">New Post</a>
-                    <a class="dropdown-item" href="#">New Project</a>
+                   
+                    
+                    <a class="dropdown-item" href="home.html">Home</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Your Dashboard</a>
-                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item" href="favoritos.html">Favoritos</a>
+                    <a class="dropdown-item" href="papelera.html">Papelera</a>
+                    <a class="dropdown-item" href="shared.html">Compartidos</a>
+                    <a class="dropdown-item" href="amigos.html">Amigos</a>
                 </div>
             </div>
         </div>
     </nav>
-    						<!-- Modal -->
-						<div class="modal fade" id="ya-eliminado" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-						aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalCenterTitle">¡Archivo Elimiado!</h5>
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										Este archivo ha sido eliminado.
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-										<!--button type="button" class="btn btn-primary">Save changes</button-->
-									</div>
-								</div>
-							</div>
-						</div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 contenido">
                 <header>HTML</header>
-                <textarea name="" id="Contenido-1" cols="58" rows="13"></textarea>
-                <div class="contenedor-separador-1" id="separador-1"></div>
+                <div id="html-editor"></div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 contenido">
                 <header>CSS</header>
-                <textarea name="" id="Contenido-2" cols="58" rows="13"></textarea>
-                <div class="contenedor-separador-2" id="separador-2"></div>
+                <div id="css-editor"></div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 contenido">
                 <header>JS</header>
-                <textarea name="" id="Contenido-3" cols="58" rows="13"></textarea>
+                <div id="js-editor"></div>
             </div>
             <div class="contenedor-expandir" id="expandir"></div>
-            <div class="contenedor-salida col-xs-12 col-sm-12 col-md-12 col-lg-12" id="salida"></div>
+            <iframe id="salida" class="contenedor-salida col-xs-12 col-sm-12 col-md-12 col-lg-12"  frameborder="0"></iframe>
             <footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 © Lidis Hernández - 2018
             </footer>
@@ -81,10 +66,13 @@
     </div>
 
 
-    
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/funcionalidad.js"></script>
+    <script src="../app/reactive.js"></script>
+
+    <script src="./ace-builds/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../app/reactive.js"></script>
 </body>
 </html>

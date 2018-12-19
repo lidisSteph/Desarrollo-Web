@@ -1767,3 +1767,8 @@ ul.activity-timeline > li {
     border: 1px solid #CCC; }
 
 /*# sourceMappingURL=main.css.map */
+
+.logo-size{
+  width: 2%;
+  height: auto;
+}
